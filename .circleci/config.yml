@@ -15,7 +15,7 @@ jobs:
           name: Run tests
           command: |
             pip install -r tests/requirements.txt
-            python -m pytest/unit/test_handler.py
+            python -m pytest tests/unit/test_handler.py
       - persist_to_workspace:
           root: ~/project
           paths:
