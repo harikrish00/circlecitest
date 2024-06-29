@@ -14,8 +14,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            cd tests
-            pip install -r requirements.txt
+            pip install -r tests/requirements.txt
             python -m pytest
       - persist_to_workspace:
           root: ~/project
