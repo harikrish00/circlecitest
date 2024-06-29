@@ -13,10 +13,10 @@ jobs:
           pkg-manager: pip
       - run:
           name: Run tests
-          command: 
-            - cd tests
-            - pip install -r requirements.txt
-            - python -m pytest
+          command: |
+            cd tests
+            pip install -r requirements.txt
+            python -m pytest
       - persist_to_workspace:
           root: ~/project
           paths:
