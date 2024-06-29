@@ -9,6 +9,7 @@ jobs:
     steps:
       - checkout # checkout source code
       - python/install-packages:
+          app-dir: hello_world
           pkg-manager: pip
       - run:
           name: Run tests
