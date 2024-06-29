@@ -17,3 +17,7 @@ jobs:
           root: ~/project
           paths:
             - .
+workflows:
+  sample:
+    jobs:
+      - build_and_test
