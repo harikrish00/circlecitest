@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "circleci-test"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-wn3u2z3dc69l"
+s3_prefix = "circleci-test"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []
