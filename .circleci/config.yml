@@ -29,6 +29,8 @@ jobs:
       - run:
           command: aws s3 ls
           name: deploy
+          environment:
+            AWS_DEFAULT_REGION: us-east-1
 
 workflows:
   sample:
