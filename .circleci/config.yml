@@ -25,7 +25,8 @@ jobs:
   deploy:
     executor: aws-cli/default
     steps: 
-      - aws-cli/setup
+      - aws-cli/setup:
+          profile_name: default
       - run:
           command: aws s3 ls
           name: deploy
@@ -33,7 +34,10 @@ jobs:
             AWS_DEFAULT_REGION: us-east-1
 
 workflows:
-  sample:
+  build_test_deploy:
     jobs:
       - build_and_test
-      - deploy
+      - deploy:
+          requires:
+            - build_and_test
+          context: awsdeploy
